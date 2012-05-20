@@ -66,6 +66,58 @@ public class BomberMain extends JFrame {
             }
         });
 
+		public void run() {
+
+			Random random = new Random();
+			int action = -1, x = 0, y = 0;
+
+			while(true) {
+
+				if((alive())
+				   {
+
+					do {
+						action = (Math.abs(random.nextInt()) % BombermanController.BOMB);
+
+						switch(action) {
+
+							case BombermanController.UP:
+								x = 0;
+								y = -1;
+								break;
+							case BombermanController.DOWN:
+								x = 0;
+								y = +1;
+								break;
+							case BombermanController.LEFT:
+								x = -1;
+								y = 0;
+								break;
+							case BombermanController.RIGHT:
+								x = +1;
+								y = 0;
+								break;
+						}
+					} while(arena[playerX[player_id] + x][0] != 0);
+				}
+
+				controller.key(BombermanController.UP, false);
+				controller.key(BombermanController.DOWN, false);
+				controller.key(BombermanController.LEFT, false);
+				controller.key(BombermanController.RIGHT, false);
+				controller.key(BombermanController.BOMB, false);
+				if(alive()) controller.key(action, true);                                     
+
+				
+			}
+		}
+
+		private boolean alive() {
+
+			return	(playerX[player_id] >= 1
+				
+		}
+
         /** Fenstertitel */
         setTitle("Bomberman Gruppe1");
 
@@ -135,6 +187,9 @@ public class BomberMain extends JFrame {
            /** Spielermusik */
            BomberBGM.change("Battle");
         }
+
+			
+		}
     }
 
     /**
