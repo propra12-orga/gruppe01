@@ -34,7 +34,7 @@ public abstract class Bombermansteuerung {
 
    // öffne konfiguration
     public static boolean openFile() {
-        // setup result to be returned 																									?????????????????????????
+    	// 
         boolean result = true;
         // versuche File zu öffnen
         try {
