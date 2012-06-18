@@ -190,7 +190,7 @@ public class BomberMain extends JFrame {
 
 			
 		}
-    }
+}
 
     /**
      * Startpunkt des Spiels
